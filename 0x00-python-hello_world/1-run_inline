@@ -1,2 +1,3 @@
 #!/bin/bash
-python3 >>>-c $PYCODE
+PYCODE= $PYCODE
+python3 -c $PYCODE
