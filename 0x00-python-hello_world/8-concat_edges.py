@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-str = "Python is an interpreted, interactive, object-oriented programming\
- language that combines remarkable power with very clear syntax"
-str = eval(input("object-oriented programming with Python"))
-print(str)
+str = "Python is an interpreted,interactive, object-oriented programming with python"\
+
+"language that combines remarkable power with very clear syntax"
+print(str[37:78])
