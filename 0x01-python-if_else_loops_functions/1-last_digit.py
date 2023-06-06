@@ -2,7 +2,6 @@
 import random
 number = random.randint(-10000, 10000)
 
-number = int(input('what is you number: '))
 last_digit = number
 
 if last_digit > 5:
