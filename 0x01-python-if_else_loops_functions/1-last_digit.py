@@ -11,5 +11,3 @@ elif last_digit == 0:
 
 else:
   print('last digit', number, 'is', last_digit, 'and less than 6 and not 0')
-
-print()
