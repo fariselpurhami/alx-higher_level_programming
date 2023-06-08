@@ -14,16 +14,16 @@ if (__name__ == "__main__"):
         a = int(argv[1])
         b = int(argv[3])
 
-        if (operator == "add"):
+        if (operator == "+"):
             print("{} + {} = {}".format(a, b, add(a, b)))
 
-        elif (operator == "sub"):
+        elif (operator == "-"):
             print("{} - {} = {}".format(a, b, sub(a, b)))
 
-        elif (operator == "mul"):
+        elif (operator == "*"):
             print("{} * {} = {}".format(a, b, mul(a, b)))
 
-        elif (operator == "div"):
+        elif (operator == "/"):
             print("{} / {} = {}".format(a, b, div(a, b)))
 
         else:
