@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 from sys import argv
 
-if __name__ == "__main__":
+if (__name__ == "__main__)":
     sum = len(argv)
     add = 0
 
-    if sum == 1:
+    if (sum == 1):
         print("{}".format(add))
 
     else:
