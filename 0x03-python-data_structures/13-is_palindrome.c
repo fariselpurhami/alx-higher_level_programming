@@ -51,3 +51,14 @@ int is_palindrome(listint_t **head)
 
 	return (1);
 }
+
+int main(void)
+{
+	listint_t *head = NULL;
+	
+	int result = is_palindrome(&head);
+	
+	printf("Is the linked list a palindrome? %d\n", result);
+	
+	return 0;
+}
