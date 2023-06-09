@@ -30,7 +30,7 @@ int is_palindrome(listint_t **head)
 
 		while (e < w / 2)
 		{
-			if (tab[e] == tab[w - j - 1])
+			if (tab[e] == tab[w - e - 1])
 			{
 				e++;
 			}
