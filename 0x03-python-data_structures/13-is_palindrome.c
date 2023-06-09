@@ -39,25 +39,8 @@ int is_palindrome(listint_t **head)
 				return (0);
 			}
 		}
+		
+		return (1);
 	}
-<<<<<<< HEAD
-
-	return (1);
 }
-
-/**
- * main - LET'S ENTRY MAIN OF THE PRGGRAM.
- * Return: IT RETURN O ALWAYS ON  SUCCESS.
- */
-int main(void)
-{
-	listint_t *head = NULL;
-	int result = is_palindrome(&head);
-
-	printf("Is the linked list a palindrome? %d\n", result);
-	return (0);
-=======
 	
-	return (1);
->>>>>>> 38e12368d1da2a179fcbf4bf16d98d065b425671
-}
