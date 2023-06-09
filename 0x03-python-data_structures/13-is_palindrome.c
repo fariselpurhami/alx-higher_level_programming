@@ -15,52 +15,31 @@ int is_palindrome(listint_t **head);
  */
 int is_palindrome(listint_t **head)
 {
-	listint_t *slow = *head, *fast = *head, *prev = NULL, *next = NULL;
+	
+	listint_t *cur = *head;
+	int tab[2048], w = 0, e = 0;
 
-	while (fast && fast->next)
+	if (*head)
 	{
-		fast = fast->next->next;
-		prev = slow;
-		slow = slow->next;
-	}
-
-	if (fast)
-	{
-		slow = slow->next;
-	}
-
-	while (slow)
-	{
-		next = slow->next;
-		slow->next = prev;
-		prev = slow;
-		slow = next;
-	}
-
-	fast = *head;
-	while (prev)
-	{
-		if (fast->n != prev->n)
+		while (cur)
 		{
-			return (0);
+			tab[w] = cur->n;
+			cur = cur->next;
+			w++;
 		}
 
-		fast = fast->next;
-		prev = prev->next;
+		while (e < w / 2)
+		{
+			if (tab[e] == tab[w - j - 1])
+			{
+				e++;
+			}
+			else
+			{
+				return (0);
+			}
+		}
 	}
-
-	return (1);
-}
-
-/**
- * main - LET'S ENTRY MAIN OF THE PRGGRAM.
- * Return: IT RETURN O ALWAYS ON  SUCCESS.
- */
-int main(void)
-{
-	listint_t *head = NULL;	
-	int result = is_palindrome(&head);
 	
-	printf("Is the linked list a palindrome? %d\n", result);
-	return (0);
+	return (1);
 }
