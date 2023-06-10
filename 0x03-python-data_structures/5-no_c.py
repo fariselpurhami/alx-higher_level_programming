@@ -4,7 +4,7 @@ def no_c(my_string):
     new_str = ''
     for w in range(len(my_string)):
 
-        if my_string[w] == 'c' or my_string[w] == 'C':
+        if my_string[w] == 'C' or my_string[w] == 'c':
             pass
 
         else:
