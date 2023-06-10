@@ -9,7 +9,6 @@ void print_python_list_info(PyObject *p);
  * THAT WILL GIVE THE  DATA OF PYLISTOBJECTIVES.
  * @p: IT'S A FUNCTIONS OF THE THE PYOBJECTIVES.
  */
-
 void print_python_list_info(PyObject *p)
 {
 	Py_ssize_t size = 0;
@@ -20,11 +19,13 @@ void print_python_list_info(PyObject *p)
 		size = PyList_Size(p);
 
 		printf("[*] Size of the Python List = %zd\n", size);
-		printf("[*] Allocated = %lu\n",	((PyListObject *)p)->allocated);
+		printf("[*] Allocated = %lu\n",
+				((PyListObject *)p)->allocated);
 
 		while (w < size)
 		{
-			printf("Element %d: %s\n", w, Py_TYPE(PyList_GetItem(p, w))->tp_name);
+			printf("Element %d: %s\n", w,
+					Py_TYPE(PyList_GetItem(p, w))->tp_name);
 			w++;
 		}
 	}
