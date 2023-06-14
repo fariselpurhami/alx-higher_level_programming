@@ -14,7 +14,7 @@ def roman_to_int(roman_string):
     n = (0)
     z = (0)
 
-    if (type(roman_string) is not str or roman_string is None):
+    if (type(roman_string) != str or roman_string is None):
 
         return (0)
 
