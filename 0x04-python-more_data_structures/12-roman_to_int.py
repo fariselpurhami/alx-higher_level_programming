@@ -11,8 +11,8 @@ def roman_to_int(roman_string):
             'M': 1000
     }
 
-    n = (0)
-    z = (0)
+    n = 0
+    z = 0
 
     if (type(roman_string) != str or roman_string is None):
 
@@ -23,11 +23,11 @@ def roman_to_int(roman_string):
         for e in range(len(roman_string) - 1, -1, -1):
 
             if (x[roman_string[e]] >= z):
-
                 n += (x[roman_string[e]])
-            else:
-                n -= (x[roman_string[e]])
 
+            else:
+
+                n -= (x[roman_string[e]])
             z = (x[roman_string[e]])
 
         return (n)
