@@ -65,7 +65,7 @@ void print_python_bytes(PyObject *p)
 		size = ((PyVarObject *)p)->ob_size + 1;
 	}
 
-	printf("  first %d bytes: ", c);
+	printf("  first %d bytes: ", size);
 
 	for (x = 0; x < size; x++)
 	{
