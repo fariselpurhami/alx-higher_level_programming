@@ -11,19 +11,19 @@ void print_python_bytes(PyObject *p);
  */
 void print_python_list(PyObject *p)
 {
-	int c, e, x;
+	int size, alloc, x;
 	const char *type;
 	PyListObject *list = (PyListObject *)p;
 	PyVarObject *var = (PyVarObject *)p;
 
-	c = var->ob_size;
-	e = list->allocated;
+	size = var->ob_size;
+	alloc = list->allocated;
 
 	printf("[*] Python list info\n");
 	printf("[*] Size of the Python List = %d\n", c);
 	printf("[*] Allocated = %d\n", e);
 
-	for (x = 0; x < c; x++)
+	for (x = 0; x < size; x++)
 	{
 		type = list->ob_item[x]->ob_type->tp_name;
 		printf("Element %d: %s\n", x, type);
@@ -41,7 +41,7 @@ void print_python_list(PyObject *p)
  */
 void print_python_bytes(PyObject *p)
 {
-	unsigned char x, c;
+	unsigned char x, size;
 	PyBytesObject *bytes = (PyBytesObject *)p;
 
 	printf("[.] bytes object info\n");
@@ -53,26 +53,26 @@ void print_python_bytes(PyObject *p)
 	}
 
 
-	printf("  c: %ld\n", ((PyVarObject *)p)->ob_size);
+	printf("  size: %ld\n", ((PyVarObject *)p)->ob_size);
 	printf("  trying string: %s\n", bytes->ob_sval);
 
 	if (((PyVarObject *)p)->ob_size > 10)
 	{
-		c = 10;
+		size = 10;
 	}
 	else
 	{
-		c = ((PyVarObject *)p)->ob_size + 1;
+		size = ((PyVarObject *)p)->ob_size + 1;
 	}
 
 	printf("  first %d bytes: ", c);
 
-	for (x = 0; x < c; x++)
+	for (x = 0; x < size; x++)
 	{
 		printf("%02hhx", bytes->ob_sval[x]);
 	}
 
-	if (x == (c - 1))
+	if (x == (size - 1))
 	{
 		printf("\n");
 	}
