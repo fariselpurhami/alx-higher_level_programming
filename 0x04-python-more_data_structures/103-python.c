@@ -28,12 +28,13 @@ void print_python_list(PyObject *p)
 	{
 		type = list->ob_item[x]->ob_type->tp_name;
 		printf("Element %d: %s\n", x, type);
+		
+		if (strcmp(type, "bytes") == 0)
+		{
+			print_python_bytes(list->ob_item[x]);
+		}
 	}
 
-	if (strcmp(type, "bytes") == 0)
-	{
-		print_python_bytes(list->ob_item[x]);
-	}
 }
 
 /**
