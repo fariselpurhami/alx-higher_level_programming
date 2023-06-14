@@ -75,10 +75,10 @@ void print_python_bytes(PyObject *p)
 
 	if (x == (size - 1))
 	{
-		printf('\n');
+		printf("\n");
 	}
 	else
 	{
-		printf(' ');
+		printf(" ");
 	}
 }
