@@ -13,7 +13,7 @@ void print_python_list(PyObject *p)
 {
 	int c, e, x;
 	const char *type;
-	PyListObject *list = (PylistObject *)p;
+	PyListObject *list = (PyListObject *)p;
 	PyVarObject *var = (PyVarObject *)p;
 
 	c = var->ob_size;
