@@ -15,13 +15,13 @@ def roman_to_int(roman_string):
     z = 0
 
     if type(roman_string) is str and roman_string:
-        for w in range(len(roman_string) - 1, -1, -1):
+        for e in range(len(roman_string) - 1, -1, -1):
 
-            if x[roman_string[w]] >= z:
-                i += x[roman_string[w]]
+            if x[roman_string[e]] >= z:
+                i += x[roman_string[e]]
 
             else:
-                i -= x[roman_string[w]]
+                i -= x[roman_string[e]]
 
-            z = x[roman_string[w]]
+            z = x[roman_string[e]]
         return (i)
