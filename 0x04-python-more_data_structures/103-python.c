@@ -27,12 +27,10 @@ void print_python_list(PyObject *p)
 	{
 		type = list->ob_item[x]->ob_type->tp_name;
 		printf("Element %d: %s\n", x, type);
-
-	}
-
-	if (strcmp(type, "bytes") == 0)
-	{
-		print_python_bytes(list->ob_item[x])
+		if (strcmp(type, "bytes") == 0)
+		{
+			print_python_bytes(list->ob_item[x])
+		}
 	}
 }
 
@@ -73,7 +71,7 @@ void print_python_bytes(PyObject *p)
 		printf("%02hhx", bytes->ob_sval[x]);
 	}
 
-	if (x == (size - 1))
+	if (x == (c - 1))
 	{
 		printf("\n");
 	}
