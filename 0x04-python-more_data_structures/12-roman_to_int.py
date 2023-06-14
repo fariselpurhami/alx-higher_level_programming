@@ -11,8 +11,8 @@ def roman_to_int(roman_string):
             'M': 1000
     }
 
-    n = 0
-    z = 0
+    n = (0)
+    z = (0)
 
     if type(roman_string) is str and roman_string:
 
