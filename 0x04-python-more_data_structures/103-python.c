@@ -49,12 +49,13 @@ void print_python_bytes(PyObject *p)
 
 	if (strcmp(p->ob_type->tp_name, 'bytes') != 0)
 	{
-		printf(' [ERROR] Invaild Bytes Object\n');
+		printf('  [ERROR] Invaild Bytes Object\n');
 		return;
 	}
-
-	printf(' c: %ld\n', ((PyVarObject *)p)->ob_size);
-	printf("  trying string: %s\n", bytes->ob_sval);
+	
+	
+	printf('  c: %ld\n', ((PyVarObject *)p)->ob_size);
+	printf('  trying string: %s\n', bytes->ob_sval);
 
 	if (((PyVarObject *)p)->ob_size > 10)
 	{
@@ -69,15 +70,15 @@ void print_python_bytes(PyObject *p)
 
 	for (x = 0; x < c; x++)
 	{
-		printf("%02hhx", bytes->ob_sval[x]);
+		printf('%02hhx', bytes->ob_sval[x]);
 	}
 
 	if (x == (size - 1))
 	{
-		printf("\n");
+		printf('\n');
 	}
 	else
 	{
-		printf(" ");
+		printf(' ');
 	}
 }
