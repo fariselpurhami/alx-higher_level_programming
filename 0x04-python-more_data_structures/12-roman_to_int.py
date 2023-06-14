@@ -19,7 +19,9 @@ def roman_to_int(roman_string):
 
             if x[roman_string[e]] >= z:
                 i += x[roman_string[e]]
+
             else:
+
                 i -= x[roman_string[e]]
             z = x[roman_string[e]]
 
