@@ -13,11 +13,11 @@ void print_python_list(PyObject *p)
 {
 	int c, e, x;
 	const char *type;
-	PylistObject *o = (PylistObject *)p;
-	PylistObject *s = (PylistObject *)p;
+	PylistObject *list = (PylistObject *)p;
+	PylistObject *var = (PylistObject *)p;
 
-	c = s->size;
-	e = o->alloc;
+	c = var->ob_size;
+	e = list->allocated;
 
 	printf('[*] Python list info\n');
 	printf('[*] Size of the Python List = %d\n', c);
@@ -25,7 +25,7 @@ void print_python_list(PyObject *p)
 
 	for (x = 0; x < c; x++)
 	{
-		type = o->ob_item[x]->ob_type->tp_name;
+		type = list->ob_item[x]->ob_type->tp_name;
 		printf('Element %d: %s\n', x, type);
 
 	}
