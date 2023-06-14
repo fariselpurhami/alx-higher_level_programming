@@ -14,6 +14,10 @@ def roman_to_int(roman_string):
     n = (0)
     z = (0)
 
+    if type(roman_string) is not str or roman_string is None:
+
+        return (0)
+
     if (type(roman_string) is str and roman_string):
 
         for e in range(len(roman_string) - 1, -1, -1):
