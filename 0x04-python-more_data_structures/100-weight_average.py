@@ -7,12 +7,12 @@ def weight_average(my_list=[]):
 
     else:
 
-        a = 0
-        v = 0
+        e = 0
+        x = 0
 
         for c in my_list:
 
-            a += (c[1])
-            v += (c[0] * c[1])
+            e += (c[1])
+            x += (c[0] * c[1])
 
-    return (v / a)
+    return (x / e)
