@@ -11,17 +11,17 @@ def roman_to_int(roman_string):
             'M': 1000
     }
 
-    out = 0
+    i = 0
     z = 0
 
     if type(roman_string) is str and roman_string:
         for w in range(len(roman_string) - 1, -1, -1):
 
             if x[roman_string[w]] >= z:
-                out += x[roman_string[w]]
+                i += x[roman_string[w]]
 
             else:
-                out -= x[roman_string[w]]
-            z = x[roman_string[w]]
+                i -= x[roman_string[w]]
 
-        return (out)
+            z = x[roman_string[w]]
+        return (i)
